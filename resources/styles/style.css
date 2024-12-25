@@ -10,10 +10,11 @@
 
 :root {
     --gradient: linear-gradient(30deg,
-    #A16BFE,
-    #ed6bfe,
-    #BC3D2F,
-    #bc752f
+    #005C7B,
+    #00355C,
+    #002049,
+    #301944,
+    #4A1541
     );
 
     --font-color: #ddd;
@@ -154,7 +155,7 @@ section {
 
 /* introduction-section */
 .introduction-section {
-    height: 95vh;
+    height: 90vh;
     background-color: transparent;
     align-items: flex-end;
     justify-content: space-between;
@@ -500,4 +501,146 @@ section {
     border-radius: 1.5rem;
     background-color: transparent;
     border: 1.5px solid black;
+}
+
+
+/* quote section */
+.quote-section {
+    background-color: transparent;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem;
+}
+
+.quote-section p {
+    font-family: "Anton";
+    font-size: 1.8rem;
+    text-align: center;
+    width: 90vw;
+}
+
+@media only screen and (min-width: 1024px){
+    .quote-section p {
+        width: 50ch;
+        font-size: 3rem;
+    }
+}
+
+
+.quote-section p span {
+    font-family: Helvetica, sans-serif;
+    font-size: 0.8rem;
+}
+
+footer {
+    background-color: black;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2.4rem 2rem;
+    gap: 0.8rem;
+}
+
+.stay-updated-section {
+    display: inline-flex;
+    align-items: center;
+}
+
+.stay-updated-info-area {
+    flex: 1;
+}
+
+.stay-updated-info-area h3 {
+    font-family: "Anton";
+    font-size: 3rem;
+}
+
+.stay-updated-info-area p {
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+.stay-updated-email-area input[type="email"] {
+    padding: 20px;
+    width: 20vw;
+}
+
+.stay-updated-email-area input[type="submit"] {
+    margin-left: 5px;
+    padding: 1rem 1.2rem;
+    border-radius: 1.5rem;
+    background-color: transparent;
+    border: 2px white solid;
+    color: white;
+}
+
+@media only screen and (max-width: 760px) {
+    .stay-updated-section {
+        flex-wrap: wrap;
+    }
+
+    #contact-us-toast-btn {
+        display: none;
+    }
+}
+
+.footer-divider {
+    border: white 0.5px solid;
+    width: 100%;
+}
+
+.footer-section {
+    display: inline-flex;
+
+}
+
+.footer-area-first {
+    flex: 1;
+    display: flex;
+    max-width: 50vw;
+    gap: 5vw;
+}
+
+.footer-area-first > * {
+    font-family: "Anton";
+    font-size: 3rem;
+}
+
+@media only screen and (max-width: 800px) {
+     .footer-area-first > * {
+        font-size: 5vw;
+    }
+
+    .logo-card {
+        font-size: 5vw;
+    }
+}
+
+.contact-us-card p{
+    font-family: Helvetica, sans-serif;
+    font-size: 0.8rem;
+    font-weight: lighter;
+}
+
+.logo-card {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 4vw;
+    font-family: "Anton";
+}
+
+.support-us-card p  a {
+    font-family: Helvetica, sans-serif;
+    display: block;
+    color: white;
+    font-weight: lighter;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
 }
