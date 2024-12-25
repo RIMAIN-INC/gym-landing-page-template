@@ -67,6 +67,7 @@ section {
     top: 0;
     background-color: transparent;
     transition: background-color ease-in-out 0.3s;
+    z-index: 100;
 }
 
 .header-left-wrap {
@@ -155,7 +156,6 @@ section {
 .introduction-section {
     height: 95vh;
     background-color: transparent;
-    border: 2px dotted green;
     align-items: flex-end;
     justify-content: space-between;
     display: flex;
@@ -164,7 +164,7 @@ section {
 }
 
 .introduction-text {
-    font-size:3.6rem;
+    font-size: clamp(1.5rem, 5vw, 5ch);;
     font-family:"Anton";
     width: 40%;
 
@@ -195,10 +195,9 @@ section {
     display: block;
     width: max-content;
     height: auto;
-    padding: 2rem 4rem;
+    padding: 1.4rem 4rem;
 
     background-color: black;
-    border-radius: 5px;
     bottom: 30px;
     right: 10px;
 
@@ -265,8 +264,14 @@ section {
 }
 
 .service-section-wrapper-h2 {
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 2vw, 5ch);
     font-family: "Anton";
+}
+
+@media only screen and (min-width: 1024px) {
+    .service-section-wrapper-h2 {
+        font-size: 5ch;
+    }
 }
 
 .service-section-wrapper > * {
@@ -318,4 +323,181 @@ section {
 .service-section-wrapper-photo-h2 {
     font-size: 2rem;
     font-family: "Anton";
+}
+
+/* amenities wrapper */
+.amenities-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.amenities-wrapper-info {
+    text-align: center;
+}
+
+.amenities-wrapper-info h3 {
+    font-family: "Anton";
+    font-size: 3rem;
+}
+
+.amenities-wrapper-info p {
+    max-width: 50ch;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+
+.amenities-wrapper-info-lists {
+    display: flex;
+    text-align: center;
+    padding: 2rem;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.amenities-info-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* contact-us form */
+
+.schedule-area {
+    /* border: solid red 2px; */
+    max-width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.schedule-area h3 {
+    font-size: clamp(1rem,5vw,3rem);
+    font-family: "Anton";
+    text-transform: uppercase;
+}
+
+.schedule-area p {
+    width: 40%;
+    line-height: 1.5rem;
+}
+
+@media only screen and (max-width: 1024px){
+    .schedule-area p {
+        width: 50vw;
+    }
+
+    .contact-us-section {
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+}
+
+.contact-us-section {
+    display: flex;
+    height:auto;
+    background-color: white;
+    color: black;
+    padding: 2rem;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 2rem;
+}
+
+.contact-us-section .schedule-area {
+    max-width: 50%;
+}
+
+.contact-us-form {
+    /* border: 2px solid green; */
+    width: 80%;
+}
+
+.contact-us-form  span {
+    color: grey;
+    font-size: 14px;
+}
+
+.contact-us-form .contact-name-title {
+    font-weight: normal;
+    font-size: 1.2rem;
+
+}
+
+.contact-us-form label{
+    font-weight: lighter;
+    font-size: 1rem;
+}
+
+.contact-us-form form {
+    width: 100%;
+    display: inline-flex;
+    /* border: 2px solid limegreen; */
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.name-container {
+    justify-self: center;
+    /* border: 2px solid rebeccapurple; */
+}
+
+.name-container-card {
+    width: 100%;
+    display: flex;
+    gap: 0.5rem;
+}
+
+.name-container-card > * {
+    display: inline-flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+.contact-us-section input {
+    padding: 1rem 2rem;
+    width: minmax(auto, 400px);
+    border: solid 1px #A9A9A9;
+    outline: none;
+}
+
+.contact-us-section input:user-valid {
+    border: solid 1.5px green;
+}
+
+.contact-us-section input:user-invalid {
+    border: solid 1.5px red;
+}
+
+
+.contact-us-section input:focus {
+    box-shadow: 0px 0px 0px 1px black;
+}
+
+.email-container{
+    display: flex;
+    flex-direction: column;
+}
+ 
+.date-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-container input {
+    max-width: fit-content;
+}
+
+#contact-submit-btn {
+    width: fit-content;
+    border-radius: 1.5rem;
+    background-color: transparent;
+    border: 1.5px solid black;
 }
